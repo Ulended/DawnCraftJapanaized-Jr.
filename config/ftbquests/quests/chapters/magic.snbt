@@ -1,0 +1,379 @@
+{
+	id: "3FBF22A12EB77153"
+	group: "0A520B482648497B"
+	order_index: 2
+	filename: "magic"
+	title: "魔法"
+	icon: "irons_spellbooks:mana_ring"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Spells \\& Spellbooks"
+			icon: {
+				id: "endrem:magical_eye"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -2.5d
+			y: 0.0d
+			description: ["ここでは、身体能力を強化したり、生き物を召喚したり、敵に破壊的な呪文を唱えたりするための魔法の能力を取得する方法について学ぶことができます。"]
+			size: 2.0d
+			id: "43BE75F09C4043F8"
+			tasks: [{
+				id: "089777A5C1B95D8D"
+				type: "checkmark"
+				title: "I understand!"
+			}]
+		}
+		{
+			title: "魔法の建造物を略奪する"
+			icon: {
+				id: "irons_spellbooks:magehunter"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -5.25d
+			y: 1.5d
+			description: [
+				"魔法ジャーナルの初期段階は、魔法の構造物を見つけ、その宝箱を略奪し、場合によってはそこに住む魔術師を倒すことから始まります。"
+				"\\nこれが巻物の主なソースとなり、実際に呪文の詠唱を開始できるようになります。"
+			]
+			dependencies: ["5D6F2EF2A0FABB1E"]
+			size: 1.5d
+			id: "0614C37C1534939E"
+			tasks: [{
+				id: "21D7529F64458A1B"
+				type: "checkmark"
+				title: "Got it!"
+			}]
+		}
+		{
+			title: "魔法の本"
+			icon: {
+				id: "irons_spellbooks:legendary_spell_book"
+				Count: 1b
+				tag: {
+					ISB_spellbook: {
+						spells: [ ]
+						activeSpellIndex: -1
+						spellSlots: 12
+					}
+				}
+			}
+			x: -2.5d
+			y: -2.0d
+			description: ["スクロールは消滅する前に 1 回のみ使用できます。 巻物を最大限に活用するには、巻物を魔導書に保管するのが最適です。 まずは薄っぺらな日記を作成してください!\\n\\n(クラスが占星術師の場合は、このステップをスキップしてください)"]
+			dependencies: ["43BE75F09C4043F8"]
+			id: "1F327242C2CCCF3C"
+			tasks: [{
+				id: "5AFA2C0E12D601FD"
+				type: "checkmark"
+				title: "Alright!"
+			}]
+		}
+		{
+			x: 2.0d
+			y: -2.0d
+			description: ["碑文テーブルを使用すると、魔法の書に巻物を配置し始めることができます。 ただし、巻物は同じかそれ以上のレアリティの魔法書にのみ配置できることに注意してください。"]
+			dependencies: ["1F327242C2CCCF3C"]
+			id: "39BD15E37DD2B01C"
+			tasks: [{
+				id: "069021CAEE611130"
+				type: "item"
+				item: "irons_spellbooks:inscription_table"
+				consume_items: false
+				only_from_crafting: false
+			}]
+			rewards: [{
+				id: "364D3C4B4475BC0D"
+				type: "xp"
+				xp: 5
+			}]
+		}
+		{
+			x: -7.5d
+			y: 1.0d
+			description: ["建造物を略奪する以外に、巻物鍛冶場を作ることも巻物を入手する適切な代替方法です。 巻物の鍛造材料はネザーで見つけることができます。\\n\\nインベントリの検索バーを使用して、さまざまな巻物のレシピを検索してください。 作成できるのはレベル 1 の巻物のみであることに注意してください。 スクロールレベルのアップグレードは後で行います。"]
+			dependencies: ["5D6F2EF2A0FABB1E"]
+			id: "5178B560C8B827E3"
+			tasks: [{
+				id: "56950BA8A3BB0936"
+				type: "item"
+				item: "irons_spellbooks:scroll_forge"
+				consume_items: false
+				only_from_crafting: false
+			}]
+		}
+		{
+			title: "マジシャンギアの始まり"
+			icon: {
+				id: "irons_spellbooks:wandering_magician_helmet"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 0.5d
+			y: 0.0d
+			description: ["魔術師にとって最適な初心者装備は、製作に鍛冶台が必要な放浪の魔術師セットです。"]
+			dependencies: ["43BE75F09C4043F8"]
+			id: "4E54C208CEF187D1"
+			tasks: [{
+				id: "63C62CE5AFA476B1"
+				type: "checkmark"
+				title: "Got it!"
+			}]
+		}
+		{
+			title: "上級マジシャンギア"
+			icon: {
+				id: "irons_spellbooks:pyromancer_helmet"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 3.0d
+			y: 0.0d
+			description: [
+				"放浪の魔術師の装備を超えて、魔術師は特定の要素の呪文詠唱能力を強化する要素固有の装備を作成できます。"
+				"\\nこれらのクラス固有の装備を作成するには、マジシャンはエレメンタル ルーンストーンを入手する必要があります。 これらのルーンストーンの素材を完成させるには儀式が必要になる場合があります。 レシピ検索機能を使ってじっくり考えてみよう！"
+			]
+			dependencies: ["4E54C208CEF187D1"]
+			id: "1EE082F0F108BFBA"
+			tasks: [{
+				id: "21F74BED3827CB09"
+				type: "checkmark"
+				title: "Cool!"
+			}]
+		}
+		{
+			x: -5.0d
+			y: 3.0d
+			description: ["魔法を作る上で最も重要な材料の一つ。 略奪と魔法のユーザーを倒すことによってのみ入手できます。"]
+			dependencies: ["0614C37C1534939E"]
+			id: "4CEED19552F9272D"
+			tasks: [{
+				id: "04C0D0354D3DFBA3"
+				type: "item"
+				item: "irons_spellbooks:arcane_essence"
+				consume_items: false
+				only_from_crafting: false
+			}]
+		}
+		{
+			title: "ギアをアップグレードする"
+			icon: {
+				id: "irons_spellbooks:pumpkin_helmet"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 6.0d
+			y: 0.0d
+			description: [
+				"装備をアップグレードするには、アップグレード オーブと秘術の金床が必要です。 アップグレードオーブの作成レシピは高価になる可能性があり、入手するのが最も難しいアイテムは秘術サルベージと燃え殻エッセンスです。"
+				"\\n"
+				"マジシャンの装備は最大 3 回までアップグレードできます。 さまざまなアップグレード オーブは、属性ダメージのブーストやマナの増加など、さまざまなステータス ボーナスを提供します。"
+			]
+			dependencies: [
+				"1EE082F0F108BFBA"
+				"5C76F132FD8587F9"
+				"607E8D1ADA6ED3A0"
+			]
+			id: "37B5F30D3F4B99F6"
+			tasks: [{
+				id: "3BE9AFC332C9476E"
+				type: "checkmark"
+				title: "わかった！"
+			}]
+			rewards: [{
+				id: "56DD80B6574EC6C2"
+				type: "item"
+				item: "irons_spellbooks:blank_rune"
+				count: 3
+			}]
+		}
+		{
+			x: -4.0d
+			y: 2.5d
+			description: ["他のすべてのルーンを作成するためのベース。 魔法の構造物、またはそれらの構造物に住む魔術師から見つけることができます。"]
+			dependencies: ["0614C37C1534939E"]
+			id: "49B1AA2C35454C74"
+			tasks: [{
+				id: "1B902538D23196EB"
+				type: "item"
+				item: "irons_spellbooks:blank_rune"
+				consume_items: false
+				only_from_crafting: false
+			}]
+		}
+		{
+			title: "Locating the Dead King"
+			x: -0.7d
+			y: 1.4d
+			description: [
+				"デッドキングは、地下深くのカタコンベに住む強力なアンデッドです。 彼を見つける唯一の方法は、気まぐれなコンパスを作成して従うことです。"
+				"\\nこのスケルトンは強力な呪文を利用してトゥームレイダーを撃退します。 完全に準備ができていない限り、試さないでください。 一方、彼を休ませることができれば、その報酬は満足のいくものではありません... あなたの魔術の旅が新たな高みに押し上げられるかもしれません!"
+			]
+			dependencies: ["0614C37C1534939E"]
+			size: 1.4d
+			id: "73A2334F5E27719A"
+			tasks: [{
+				id: "45DD5B0FAD17B43A"
+				type: "item"
+				item: {
+					id: "irons_spellbooks:wayward_compass"
+					Count: 1b
+					tag: { }
+				}
+			}]
+		}
+		{
+			title: "古代の戦場"
+			icon: {
+				id: "mutantmonsters:mutant_skeleton_skull"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -1.3d
+			y: 2.6d
+			description: ["古代の戦場はネザーにあります。 つるはしで鎧の山を採掘すると、古代の騎士を復活させることができます。"]
+			dependencies: ["0614C37C1534939E"]
+			size: 1.3d
+			id: "28F664AE3CBA9E87"
+			tasks: [{
+				id: "04B7F97553E6079A"
+				type: "checkmark"
+				title: "Spooky..."
+			}]
+		}
+		{
+			x: 3.0d
+			y: 2.0d
+			description: ["アップグレードオーブを作成するために必要なコンポーネント。 古代の戦場で古代の騎士を倒すことによってのみ入手できます。"]
+			dependencies: ["28F664AE3CBA9E87"]
+			id: "0CFC93A854B6EBE1"
+			tasks: [{
+				id: "3727B06E2FE205B4"
+				type: "item"
+				item: "irons_spellbooks:cinder_essence"
+			}]
+			rewards: [{
+				id: "155E77020EC84993"
+				type: "item"
+				item: "irons_spellbooks:arcane_essence"
+				count: 4
+			}]
+		}
+		{
+			title: "巻物の入手"
+			icon: "ob_core:scroll_primitive_rites"
+			x: -5.25d
+			y: 0.0d
+			description: ["巻物を入手するには主に2つの方法があります。"]
+			dependencies: ["43BE75F09C4043F8"]
+			size: 1.5d
+			id: "5D6F2EF2A0FABB1E"
+			tasks: [{
+				id: "4DB549B82B05387F"
+				type: "checkmark"
+				title: "Show me!"
+			}]
+		}
+		{
+			x: 6.0d
+			y: -2.0d
+			description: ["巻物のアップグレード、装備のアップグレード、武器の強化に使用されます。"]
+			dependencies: ["39BD15E37DD2B01C"]
+			id: "5C76F132FD8587F9"
+			tasks: [{
+				id: "65079F0A627BA537"
+				type: "item"
+				item: "irons_spellbooks:arcane_anvil"
+				consume_items: false
+				only_from_crafting: false
+			}]
+		}
+		{
+			x: 6.0d
+			y: 2.0d
+			description: ["装備をアップグレードするためのベースオーブ。 使用するにはルーンを埋め込む必要があります。"]
+			dependencies: ["0CFC93A854B6EBE1"]
+			id: "607E8D1ADA6ED3A0"
+			tasks: [{
+				id: "450C6924ABAA82D0"
+				type: "item"
+				item: "irons_spellbooks:upgrade_orb"
+			}]
+		}
+		{
+			title: "Unique Relics \\& Spellbooks"
+			icon: "irons_spellbooks:emerald_stoneplate_ring"
+			x: -6.8d
+			y: -2.55d
+			description: ["冒険のあらゆる段階で、指輪、ユニークな呪文の本、名前付きの呪文の本、魔法のリソースに必ず注目してください。"]
+			hide_dependency_lines: true
+			dependencies: ["43BE75F09C4043F8"]
+			size: 1.7d
+			id: "142D6C7E522A3208"
+			tasks: [{
+				id: "128B025C180FB6B2"
+				type: "checkmark"
+				title: "Awesome!"
+			}]
+		}
+		{
+			x: -6.0d
+			y: 3.0d
+			description: ["巻物を作成するために必要なコンポーネント。 魔法の構造物や強力な魔法の生き物で見つけることができます。"]
+			dependencies: ["0614C37C1534939E"]
+			id: "4200E32F0492E2E3"
+			tasks: [{
+				id: "58DEDE820A0E14A3"
+				type: "item"
+				item: "irons_spellbooks:common_ink"
+			}]
+		}
+		{
+			title: "Making Your First Scroll"
+			icon: {
+				id: "irons_spellbooks:scroll"
+				Count: 1b
+				tag: {
+					ISB_spell: {
+						type: 1
+						level: 1
+					}
+				}
+			}
+			x: -7.5d
+			y: 4.0d
+			description: ["インクと巻物鍛冶の両方があれば、最初の巻物を作る準備は完了です。"]
+			dependencies: [
+				"5178B560C8B827E3"
+				"4200E32F0492E2E3"
+			]
+			id: "55DE5FDCFC67E4A2"
+			tasks: [{
+				id: "454D6DA7C5585A1B"
+				type: "checkmark"
+				title: "Thanks!"
+			}]
+			rewards: [{
+				id: "62DD7A9F0FD11783"
+				type: "item"
+				item: "irons_spellbooks:magic_cloth"
+			}]
+		}
+	]
+	quest_links: [ ]
+}
