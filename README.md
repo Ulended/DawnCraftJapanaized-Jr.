@@ -7,3 +7,5 @@
 
 導入方法並びにほかの翻訳ファイルはハリイロ様の DawnCraftJapanaizedを参照してください。
 https://github.com/haricolor/DawnCraftJapanaized
+
+config2.0版追加
