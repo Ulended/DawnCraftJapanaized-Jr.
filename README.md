@@ -11,3 +11,4 @@ https://github.com/haricolor/DawnCraftJapanaized
 config2.0版追加
 modファイル追加
 職業選択画面用翻訳ファイル追加
+入れても機能しない場合は、ハリイロ様のリソースパックに上書きしてみるとうまくいきます
